@@ -1,8 +1,6 @@
-<div class="container w-50 mt-5 text-center">
-  <div class="row">
-    <div class="col">
-      <div class="text-center display-3 -m-3 text-white">
-    Word Limit: {{ limit }}
+<div class="display-4 text-white">
+    <div class="text-center display-3 -m-3 text-white">
+    Country Limit: {{ limit }}
   </div>
   
   <input 
@@ -15,29 +13,23 @@
   />
 
   <button
-    (click)="generateWords()" 
+    (click)="generateCountries()" 
     class="btn btn-info">
-    Generate Words
+    Generate Countries
   </button>
   
   <p 
     *ngIf="words.length==0; else elseBlock" 
     class="display-4 text-white">
-      No words generated yet.
+      No countries generated yet.
     </p>
   <ng-template
     #elseBlock
   >
     <div class="card card-body">
-      <p class="display-4">
+      <p class="display-4 text-black">
         {{ words }}
       </p>
     </div>
   </ng-template>
-    </div>
-    <div class="col">
-      <country-component>
-      </country-component>
-    </div>
-  </div>
 </div>
